@@ -8,7 +8,7 @@ public class ArrEmployee {
     }
 
 
-    // Реализуем метод add (создать контакт):
+    // Реализуем метод add (создать сотрудника):
     public void addContact(String fullName, int departament, int sallary) {
         if (size >= persons.length) {
             System.out.println("Нельзя добавить контакт, закончилось место");
@@ -18,7 +18,7 @@ public class ArrEmployee {
     }
 
 
-    // Реализуем метод printAllContacts (распечатать все контакты)
+    // Реализуем метод printAllContacts (распечатать всех сотрудников)
     public void printAllContacts() {
         for (int i = 0; i < size; i++) {
             Employee newPerson = persons[i];
