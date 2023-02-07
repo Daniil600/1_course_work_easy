@@ -9,7 +9,7 @@ public class ArrEmployee {
 
 
     // Реализуем метод add (создать сотрудника):
-    public void addSallary(String fullName, int departament, int sallary) {
+    public void addEmployer(String fullName, int departament, int sallary) {
         if (size >= persons.length) {
             System.out.println("Нельзя добавить контакт, закончилось место");
         }
@@ -18,8 +18,8 @@ public class ArrEmployee {
     }
 
 
-    // Реализуем метод printAllSallary (распечатать всех сотрудников)
-    public void printAllSallary() {
+    // Реализуем метод printAllEmployer (распечатать всех сотрудников)
+    public void printAllEmployer() {
         for (int i = 0; i < size; i++) {
             Employee newPerson = persons[i];
             System.out.println(newPerson.toString());
@@ -99,18 +99,13 @@ public class ArrEmployee {
         }
     }
     public void minSallaryDepartament(int departament){
-        int minSallary = 0;
+        int minSallary = 1_000_000;
         for (int i = 0; i < size; i++) {
-            if(persons[i].getDepartament() == departament){
-                minSallary = persons[i].getSallary();
-                break;
-            }
-        }
-
-        for (int i = 0; i < size; i++) {
-            if (persons[i].getDepartament() == departament){
-                if (minSallary > persons[i].getSallary()){
-                    minSallary = persons[i].getSallary();
+            if(persons[i] != null){
+                if (persons[i].getDepartament() == departament) {
+                    if (minSallary > persons[i].getSallary()) {
+                        minSallary = persons[i].getSallary();
+                    }
                 }
             }
         }
@@ -120,16 +115,11 @@ public class ArrEmployee {
     public void maxSallaryDepartament(int departament){
         int maxSallary = 0;
         for (int i = 0; i < size; i++) {
-            if(persons[i].getDepartament() == departament){
-                maxSallary = persons[i].getSallary();
-                break;
-            }
-        }
-
-        for (int i = 0; i < size; i++) {
-            if (persons[i].getDepartament() == departament){
-                if (maxSallary < persons[i].getSallary()){
-                    maxSallary = persons[i].getSallary();
+            if (persons[i] != null) {
+                if (persons[i].getDepartament() == departament) {
+                    if (maxSallary < persons[i].getSallary()) {
+                        maxSallary = persons[i].getSallary();
+                    }
                 }
             }
         }
@@ -148,19 +138,15 @@ public class ArrEmployee {
         System.out.println("Сумму затрат на зарплату по " + departament + " отделу: " + sumSallary);
     }
     public void avgSallaryDepartament(int departament) {
-        int maxSallary = 0;
+        int sumSallary = 0;
         int count = 0;
         for (int i = 0; i < size; i++) {
             if (persons[i].getDepartament() == departament) {
+                sumSallary += persons[i].getSallary();
                 count++;
             }
         }
-        for (int i = 0; i < size; i++) {
-            if (persons[i].getDepartament() == departament) {
-                maxSallary += persons[i].getSallary();
-            }
-        }
-        System.out.println("Средняя зарплата в " + departament + " отделе " + (maxSallary / count));
+        System.out.println("Средняя зарплата в " + departament + " отделе " + (sumSallary / count));
     }
     public void changeSallaryIndexDepartament(int departament, int procent){
         double procentCal = (double) procent / 100;

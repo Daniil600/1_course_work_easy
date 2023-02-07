@@ -4,14 +4,14 @@ public class Main {
     public static void main(String[] args) {
         ArrEmployee arrEmployee = new ArrEmployee();
 
-        arrEmployee.addSallary("Сазонов Даниил Романович", 1, 85000);
-        arrEmployee.addSallary("Райевская Анна Алексеевна", 1, 87000);
-        arrEmployee.addSallary("Волков Алексей Иванович", 4, 98000);
-        arrEmployee.addSallary("Борова Виктория Сергеевна", 2, 56000);
-        arrEmployee.addSallary("Калинин Павел Никитич", 4, 110000);
-        arrEmployee.addSallary("Каховский Степан Владимирович", 3, 67000);
-        arrEmployee.addSallary("Павлова Екатерина Евгеньевна", 4, 65000);
-        arrEmployee.addSallary("Михалкова Полина Алексеевна", 2, 120000);
+        arrEmployee.addEmployer("Сазонов Даниил Романович", 1, 85000);
+        arrEmployee.addEmployer("Райевская Анна Алексеевна", 1, 87000);
+        arrEmployee.addEmployer("Волков Алексей Иванович", 4, 98000);
+        arrEmployee.addEmployer("Борова Виктория Сергеевна", 2, 56000);
+        arrEmployee.addEmployer("Калинин Павел Никитич", 4, 110000);
+        arrEmployee.addEmployer("Каховский Степан Владимирович", 3, 67000);
+        arrEmployee.addEmployer("Павлова Екатерина Евгеньевна", 4, 65000);
+        arrEmployee.addEmployer("Михалкова Полина Алексеевна", 2, 120000);
 
 
         arrEmployee.printFullName();
@@ -34,7 +34,7 @@ public class Main {
 
         System.out.println();
 
-        arrEmployee.printAllSallary();
+        arrEmployee.printAllEmployer();
 
         System.out.println();
 
@@ -50,7 +50,7 @@ public class Main {
 
         System.out.println();
 
-        arrEmployee.printAllSallary();
+        arrEmployee.printAllEmployer();
 
         System.out.println();
 
