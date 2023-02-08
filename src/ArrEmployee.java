@@ -9,13 +9,16 @@ public class ArrEmployee {
 
 
     // Реализуем метод add (создать сотрудника):
+
     public void addEmployer(String fullName, int departament, int sallary) {
+
         if (size >= persons.length) {
             System.out.println("Нельзя добавить контакт, закончилось место");
         }
         Employee newContact = new Employee(fullName, departament, sallary);
         persons[size++] = newContact;
     }
+
 
 
     // Реализуем метод printAllEmployer (распечатать всех сотрудников)
