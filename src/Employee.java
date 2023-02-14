@@ -2,7 +2,6 @@ import java.lang.reflect.Array;
 import java.util.Objects;
 
 public class Employee {
-    Employee[] employeis = new Employee[10];
     private int size;
     private String fullName;
     private int departament;
@@ -58,6 +57,5 @@ public class Employee {
                 "\nОтдел: " + getDepartament() +
                 "\nЗарплата: " + getSallary() +
                 "\nID: " + getId();
-
     }
 }
